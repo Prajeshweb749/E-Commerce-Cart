@@ -1,0 +1,505 @@
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in element's total width and height */
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    font-family: Arial, sans-serif;
+    /* Set font for the page */
+}
+
+/* Header styling */
+header {
+    height: 40px;
+    /* Fixed height for the header */
+    width: 100%;
+    /* Full width of the viewport */
+    background: rebeccapurple;
+    /* Background color */
+    padding: 10px 0;
+    /* Vertical padding */
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    /* Flexbox layout for horizontal alignment */
+    justify-content: center;
+    /* Center the nav items */
+    list-style: none;
+    /* Remove default list styling */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+nav ul li i {
+    color: white;
+    /* Icon color */
+    cursor: pointer;
+    /* Show pointer cursor on hover */
+}
+
+/* Section styling */
+section {
+    background-color: black;
+    /* Section background color */
+    width: 100%;
+    /* Full width of the viewport */
+    padding: 20px;
+    /* Padding inside section */
+}
+
+/* Gallery styling */
+.gallery {
+    display: flex;
+    /* Flexbox layout for items */
+    flex-wrap: wrap;
+    /* Allow items to wrap to next line */
+    justify-content: center;
+    /* Center the gallery items */
+}
+
+/* Item styling in gallery */
+.items {
+    height: 300px;
+    /* Fixed height for items */
+    width: 300px;
+    /* Fixed width for items */
+    margin: 10px;
+    /* Margin between items */
+    border: 2px solid rebeccapurple;
+    /* Border color and width */
+    border-radius: 20px;
+    /* Rounded corners */
+    display: flex;
+    /* Flexbox layout for items */
+    flex-direction: column;
+    /* Arrange children in a column */
+    justify-content: space-between;
+    /* Space items vertically */
+    align-items: center;
+    /* Center items horizontally */
+}
+
+.items img {
+    height: 100%;
+    /* Full height of the item container */
+    width: 100%;
+    /* Full width of the item container */
+    object-fit: cover;
+    /* Cover the container while preserving aspect ratio */
+    object-position: top;
+    /* Align image to the top */
+    border-top-left-radius: 20px;
+    /* Rounded top-left corner */
+    border-top-right-radius: 20px;
+    /* Rounded top-right corner */
+}
+
+.items:nth-child(3) h1 {
+    font-size: 22px;
+    /* Specific font size for the third item */
+}
+
+.items div:nth-child(1) {
+    height: 50%;
+    /* Half height for the first div */
+    width: 100%;
+    /* Full width */
+}
+
+.items div:nth-child(2) {
+    height: 50%;
+    /* Half height for the second div */
+    width: 100%;
+    /* Full width */
+    display: flex;
+    /* Flexbox layout for children */
+    flex-direction: column;
+    /* Arrange children in a column */
+    justify-content: space-around;
+    /* Space children vertically */
+    align-items: center;
+    /* Center children horizontally */
+}
+
+a {
+    text-decoration: none;
+    /* Remove underline from links */
+    font-weight: 900;
+    /* Bold font weight */
+    padding: 10px;
+    /* Padding inside links */
+    background: rebeccapurple;
+    /* Background color */
+    border-radius: 5px;
+    /* Rounded corners */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+h1,
+p {
+    color: white;
+    /* Text color for h1 and p */
+    margin: 0;
+    /* Remove default margin */
+}
+
+/* Cart section styling */
+.cart-sec {
+    position: fixed;
+    /* Fixed position to stay in view */
+    width: 100%;
+    /* Full width of the viewport */
+    height: 100vh;
+    /* Full height of the viewport */
+    display: none;
+    /* Initially hidden */
+    justify-content: center;
+    /* Center cart items horizontally */
+    align-items: flex-start;
+    /* Align items to the top */
+    padding: 0px;
+    /* No padding */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+    top: 0;
+    /* Align to the top of the viewport */
+    background-color: rgb(0, 0, 0);
+    /* Background color */
+    transition: transform 0.5s linear;
+    /* Smooth transition for the slide-in/out effect */
+}
+
+/* Cart header styling */
+.cart-h {
+    text-align: center;
+    /* Center align text */
+    width: 100%;
+    /* Full width of the cart section */
+    position: absolute;
+    /* Absolute positioning to place header at the top */
+    top: 20px;
+    /* Distance from the top */
+    color: white;
+    /* Text color */
+    border-bottom: 1px solid rebeccapurple;
+    /* Bottom border */
+    padding-bottom: 15px;
+    /* Padding below the text */
+}
+
+/* Cart close button styling */
+.cart-c {
+    position: absolute;
+    /* Absolute positioning to place close button at the top-right */
+    top: 20px;
+    /* Distance from the top */
+    right: 20px;
+    /* Distance from the right */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    color: white;
+    /* Icon color */
+}
+
+/* Animation classes for showing and hiding the cart */
+.intro {
+    animation: intro ease 0.5s forwards;
+    /* Animation for sliding in */
+}
+
+.outro {
+    animation: outro ease 0.5s forwards;
+    /* Animation for sliding out */
+}
+
+/* Keyframes for intro animation */
+@keyframes intro {
+    0% {
+        transform: translateY(100vh);
+        /* Start from bottom of the viewport */
+    }
+
+    100% {
+        transform: translateY(0vh);
+        /* End at the top of the viewport */
+    }
+}
+
+/* Keyframes for outro animation */
+@keyframes outro {
+    0% {
+        transform: translateY(0vh);
+        /* Start at the top of the viewport */
+    }
+
+    100% {
+        transform: translateY(100vh);
+        /* End at the bottom of the viewport */
+    }
+}
+
+/* Cart items styling */
+.cart-items {
+    position: absolute;
+    /* Absolute positioning to place items in the cart section */
+    top: 60px;
+    /* Distance from the top */
+    min-height: 0%;
+    /* Minimum height for items */
+    width: 100%;
+    /* Full width */
+    display: flex;
+    /* Flexbox layout */
+    justify-content: flex-start;
+    /* Align items to the start */
+    align-items: center;
+    /* Center items vertically */
+    background: white;
+    /* Background color */
+    flex-direction: column;
+    /* Arrange items in a column */
+    padding: 0px;
+    /* No padding */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+/* Styling for each cart item */
+.cart-items>.cart-item {
+    width: 105%;
+    /* Slightly wider than the cart section */
+    background: black;
+    /* Background color */
+    border-top: 2px solid rebeccapurple;
+    /* Top border */
+    display: flex;
+    /* Flexbox layout */
+    justify-content: space-between;
+    /* Space items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    color: white;
+    /* Text color */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+/* Cart item image styling */
+.cart-items>.cart-item img {
+    object-fit: cover;
+    /* Cover the container while preserving aspect ratio */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin: 20px;
+    /* Margin around image */
+}
+
+/* Cart item details styling */
+.cart-items>.cart-item .item-details {
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Arrange details in a column */
+    justify-content: center;
+    /* Center details vertically */
+    flex: 1;
+    /* Flex-grow to fill available space */
+    margin: 0px 40px;
+    /* Horizontal margin */
+}
+
+/* Cart item details text styling */
+.cart-items>.cart-item .item-details h2,
+.cart-items>.cart-item .item-details p {
+    margin: 5px 0px;
+    /* Margin between text elements */
+}
+
+/* Remove item button styling */
+.cart-items>.cart-item .remove-item {
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    color: white;
+    /* Icon color */
+    font-size: 1.5rem;
+    /* Font size */
+    margin-right: 20px;
+    /* Margin to the right */
+}
+
+/* Styling for "Added" state of the add-to-cart button */
+a.added {
+    background-color: gray;
+    /* Background color for disabled state */
+    cursor: not-allowed;
+    /* Cursor indicating disabled state */
+    pointer-events: none;
+    /* Prevent interaction */
+}
+
+/* Quantity section styling */
+.quantity {
+    display: flex;
+    /* Flexbox layout */
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* Quantity button styling */
+.quantity button {
+    margin: 0 5px;
+    /* Horizontal margin */
+    background-color: rebeccapurple;
+    /* Background color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* Remove border */
+    padding: 10px 15px;
+    /* Padding inside buttons */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+/* Quantity span styling */
+.quantity span {
+    margin: 0px 20px;
+    /* Horizontal margin */
+    color: white;
+    /* Text color */
+}
+
+/* Cart footer styling */
+.cart-footer {
+    width: 100%;
+    /* Full width of the viewport */
+    background-color: black;
+    /* Background color */
+    color: white;
+    /* Text color */
+    display: flex;
+    /* Flexbox layout */
+    justify-content: space-between;
+    /* Space items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    padding: 0px 20px;
+    /* Horizontal padding */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+    position: absolute;
+    /* Absolute positioning at the bottom */
+    bottom: 0;
+    /* Align to the bottom of the viewport */
+    border-top: 2px solid rebeccapurple;
+    /* Top border */
+}
+
+/* Cart footer button styling */
+.cart-footer button {
+    padding: 10px 20px;
+    /* Padding inside button */
+    background-color: gray;
+    /* Background color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-weight: 900;
+    /* Bold font weight */
+}
+
+/* Decrease button styling when disabled */
+#decreasebtn {
+    cursor: not-allowed;
+    /* Cursor indicating disabled state */
+    pointer-events: none;
+    /* Prevent interaction */
+    background: gray;
+    /* Background color */
+}
+
+/* Media queries for responsive design */
+@media(min-width:600px) {
+
+    /* Styles for screens wider than 600px */
+    .cart-item {
+        height: 100px;
+        /* Fixed height for cart items */
+        padding: 0px 40px;
+        /* Horizontal padding */
+    }
+
+    .cart-items>.cart-item img {
+        height: 80px;
+        /* Fixed height for images */
+        width: 80px;
+        /* Fixed width for images */
+    }
+
+    .quantity {
+        margin: 0px 80px;
+        /* Horizontal margin */
+    }
+
+    .cart-item h1 {
+        margin: 0px 60px 0px 30px;
+        /* Margin around heading */
+    }
+}
+
+@media(max-width:600px) {
+
+    /* Styles for screens narrower than 600px */
+    .cart-item {
+        flex-direction: column;
+        /* Arrange items in a column */
+        height: 100%;
+        /* Full height */
+        padding: 40px 0px;
+        /* Vertical padding */
+    }
+
+    .cart-items>.cart-item img {
+        height: 250px;
+        /* Fixed height for images */
+        width: 250px;
+        /* Fixed width for images */
+    }
+
+    .quantity {
+        margin: 20px 0px;
+        /* Vertical margin */
+    }
+
+    .remove-item {
+        display: flex;
+        /* Flexbox layout */
+        justify-content: flex-end;
+        /* Align to the right */
+        align-items: flex-start;
+        /* Align to the top */
+        width: 100%;
+        /* Full width */
+        position: absolute;
+        /* Absolute positioning */
+    }
+
+    .cart-item h1 {
+        margin: 10px 0px;
+        /* Vertical margin */
+    }
+}
