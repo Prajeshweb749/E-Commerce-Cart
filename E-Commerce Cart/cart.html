@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://kit.fontawesome.com/8ef7076467.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><i onclick="cart()" class="fa-solid fa-cart-shopping fa-2xl" aria-hidden="true"></i></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="gallery">
+            <div class="items">
+                <div>
+                    <img src="https://media.boohoo.com/i/boohoo/bmm57614_white_xl/male-white-long-sleeve-stretch-fit-satin-shirt/?w=900&amp;qlt=default&amp;fmt.jp2.qlt=70&amp;fmt=auto&amp;sm=fit" alt="White Shirt">
+                </div>
+                <div>
+                    <h1>White Shirt</h1>
+                    <p>Price: ₹ 650</p>
+                    <a onclick="add(this)" data-name="White Shirt" data-price="650" href="#" alt="650">Add to cart</a>
+                </div>
+            </div>
+            <div class="items">
+                <div>
+                    <img src="https://nicksonshirts.com/wp-content/uploads/2021/06/casual-shirt-model-front-picture-with-a-grey-background.jpg" alt="Blue Shirt">
+                </div>
+                <div>
+                    <h1>Blue Shirt</h1>
+                    <p>Price: ₹ 600</p>
+                    <a onclick="add(this)" data-name="Blue Shirt" data-price="600" href="#">Add to cart</a>
+                </div>
+            </div>
+            <div class="items">
+                <div>
+                    <img src="https://m.media-amazon.com/images/I/71gVqsrwhbL._AC_UF894,1000_QL80_.jpg" alt="Blue & Yellow Printed Shirt">
+                </div>
+                <div>
+                    <h1>Blue & Yellow Printed Shirt</h1>
+                    <p>Price: ₹ 700</p>
+                    <a onclick="add(this)" data-name="Blue & Yellow Printed Shirt" data-price="700" href="#">Add to cart</a>
+                </div>
+            </div>
+            <div class="items">
+                <div>
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/294445171/SO/ST/AJ/103363258/men-regular-fit-solid-casual-shirt-500x500.jpg" alt="Green Shirt">
+                </div>
+                <div>
+                    <h1>Green Shirt</h1>
+                    <p>Price: ₹ 750</p>
+                    <a onclick="add(this)" data-name="Green Shirt" data-price="750" href="#">Add to cart</a>
+                </div>
+            </div>
+            <div class="items">
+                <div>
+                    <img src="https://lh5.googleusercontent.com/proxy/eckPie9oO-pzGbLoCXxCg1p0SQrZOVsZRAY6gIGXq7mQOpZQPKWEQCi22C-NXEyPGroYvAoU0BPHThVd_MgW_7WQnx-CfQmj1dkDlxTpXaB8MKmkAprO8uHRCrOs-Miznay1i0hoFVehm5GUveZbF5dPEneTEvvHnLbc9ped1FCxiGAkc8YOqgx5VmCMqTGX-UKze3rjacByJsrAjQC4" alt="Denim Shirt">
+                </div>
+                <div>
+                    <h1>Denim Shirt</h1>
+                    <p>Price: ₹ 800</p>
+                    <a onclick="add(this)" data-name="Denim Shirt" data-price="800" href="#">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cart-sec" class="cart-sec">
+        <div class="cart-h"><h1>Cart</h1></div>
+        <div class="cart-c"><i onclick="cartc()" class="fa-solid fa-xmark fa-2xl"></i></div>
+        <div class="cart-items" id="cart-items">
+
+        </div>
+        <div class="cart-footer">
+            <h2 id="cart-total">Total Price: ₹ 0</h2>
+            <button id="placeorder" onclick="placeOrder()">Place Order</button>
+        </div>
+        
+    </section>
+    <script src="C:\Users\HP\Documents\web\prac\E-Commerce Cart\script.js" ></script>
+</body>
+</html>
